@@ -9,12 +9,12 @@
 </head>
 <body>
 <h1> Amazon Connect </h1>
-<h2> Screenpop Example PIZZAHUT </h1>
+<h2> PIZZAHUT </h1>
 <div id="containerDiv" ></div>
 <script>
 connect.core.initCCP(containerDiv, {
-   ccpUrl:        'https://ph-prod.my.connect.aws/ccp-v2/',
-   loginPopup:    true,          
+   ccpUrl:        'https://pizzahut-prod.my.connect.aws/ccp-v2/',
+   loginPopup:    false,          
    softphone:     {              
       allowFramedSoftphone: true
    }
@@ -40,7 +40,6 @@ connect.contact(function(contact) {
                 var option = JSON.stringify(attributeMap["agt_IVROption"]["value"]);
                 var storeId = JSON.stringify(attributeMap["agt_store_id"]["value"]);
                 
-                // window.alert("Customer's name: " + name + "\nCustomer's phone #: " + phone + "\nCustomer's account #: " + account);
                 window.alert("Customer's option: " + option + "\nStore ID: " + storeId);
         });
 });
